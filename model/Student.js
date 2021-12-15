@@ -8,33 +8,25 @@ const studentSchema = new mongoose.Schema({
         min : 3,
         max : 255
     },
+    dateofbirth:{
+        type : String
+    },
+    school:{
+        type:String,
+        required:true,
+    },
     email : {
         type : String,
         required : true,
         max : 255,
         min : 4
     },
-    class:{
-        type:String,
-        required:true,
-    },
-    rollNo:{
+   
+    contact:{
         type:Number,
         required:true,
     },
-    photoid:{
-        type:String,
-        required:true
-    },
-    password : {
-        type : String,
-        required : true,
-        min : 6
-    },
-    date : {
-        type : Date,
-        default : Date.now
-    }
+   
 }) 
 
 
