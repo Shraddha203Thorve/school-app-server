@@ -11,7 +11,9 @@
     },
     "servers": [
         {
-            "url": "http://localhost:4000/api/admission"
+            "url":[
+                "http://localhost:4000/"
+               ]
         }
     ],
     "tags": [
@@ -50,6 +52,34 @@
                         "description": "OK",
                         "schema": {
                             "$ref": "http://localhost:4000/api/admission"
+                        }
+                    }
+                }
+            }
+        },
+        "/register": {
+            "post": {
+                "tags": [
+                    "post enquiry"
+                ],
+                "summary": "posting enquiry in system",
+                "requestBody": {
+                    "description": " Enquiry form filling",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {}
+                        }
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "http://localhost:4000/api/student"
                         }
                     }
                 }
@@ -98,6 +128,7 @@
                     }
                 }
             }
+          
         }
     },
     "definitions": {
